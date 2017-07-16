@@ -12,7 +12,6 @@ public class Book {
     private String mCategory;           //CATEGORY OF THE BOOK
     private String mCurrecyCode;        //CURRENCY CODE
     private String mPrintType;          //PRINT TYPE OF THE BOOK
-    private String mLang;               //LANGUAGE OF THE BOOK
     private String mThumbnailLink;      //THUMBNAIL LINK OF THE BOOK'S COVER
     private String mPreviewLink;        //EXTERNAL LINK TO THE BOOK
     private String mBuyLink;            //EXTERNAL LINK TO THE PAGE WHERE THE BOOK CAN BE PURCHASED
@@ -27,7 +26,7 @@ public class Book {
 
     //DEFAULT CONSTRUCTOR FOR THE OBJECT
     public Book(String title, String author, String publisher, String publishDate, String description, String category,
-                String currencyCode, String printType, String lang, String thumbnailLink, String previewLink, String buyLink, int pageCount,
+                String currencyCode, String printType, String thumbnailLink, String previewLink, String buyLink, int pageCount,
                 double rating, double retailPrice, boolean isEpubAvailable, boolean isPdfAvailable){
 
         mTitle = title;
@@ -38,7 +37,6 @@ public class Book {
         mCategory = category;
         mCurrecyCode = currencyCode;
         mPrintType = printType;
-        mLang = lang;
         mThumbnailLink = thumbnailLink;
         mPreviewLink = previewLink;
         mBuyLink = buyLink;
@@ -55,135 +53,64 @@ public class Book {
         return mTitle;
     }
 
-    public void setmTitle(String mTitle) {
-        this.mTitle = mTitle;
-    }
-
     public String getmAuthor() {
         return mAuthor;
-    }
-
-    public void setmAuthor(String mAuthor) {
-        this.mAuthor = mAuthor;
     }
 
     public String getmPublisher() {
         return mPublisher;
     }
 
-    public void setmPublisher(String mPublisher) {
-        this.mPublisher = mPublisher;
-    }
-
     public String getmPublishDate() {
         return mPublishDate;
-    }
-
-    public void setmPublishDate(String mPublishDate) {
-        this.mPublishDate = mPublishDate;
     }
 
     public String getmDescription() {
         return mDescription;
     }
 
-    public void setmDescription(String mDescription) {
-        this.mDescription = mDescription;
-    }
-
     public String getmCategory() {
         return mCategory;
-    }
-
-    public void setmCategory(String mCategory) {
-        this.mCategory = mCategory;
     }
 
     public String getmCurrecyCode() {
         return mCurrecyCode;
     }
 
-    public void setmCurrecyCode(String mCurrecyCode) {
-        this.mCurrecyCode = mCurrecyCode;
-    }
-
     public String getmPrintType() {
         return mPrintType;
-    }
-
-    public void setmPrintType(String mPrintType) {
-        this.mPrintType = mPrintType;
-    }
-
-    public String getmLang() {
-        return mLang;
-    }
-
-    public void setmLang(String mLang) {
-        this.mLang = mLang;
     }
 
     public String getmThumbnailLink() {
         return mThumbnailLink;
     }
 
-    public void setmThumbnailLink(String mThumbnailLink) {
-        this.mThumbnailLink = mThumbnailLink;
-    }
-
     public String getmPreviewLink() {
         return mPreviewLink;
-    }
-
-    public void setmPreviewLink(String mPreviewLink) {
-        this.mPreviewLink = mPreviewLink;
     }
 
     public String getmBuyLink() {
         return mBuyLink;
     }
 
-    public void setmBuyLink(String mBuyLink) {
-        this.mBuyLink = mBuyLink;
-    }
-
     public int getmPageCount() {
         return mPageCount;
-    }
-
-    public void setmPageCount(int mPageCount) {
-        this.mPageCount = mPageCount;
     }
 
     public double getmRating() {
         return mRating;
     }
 
-    public void setmRating(double mRating) {
-        this.mRating = mRating;
-    }
-
     public double getmRetailPrice() {
         return mRetailPrice;
-    }
-
-    public void setmRetailPrice(double mRetailPrice) {
-        this.mRetailPrice = mRetailPrice;
     }
 
     public boolean ismIsEpubAvailable() {
         return mIsEpubAvailable;
     }
 
-    public void setmIsEpubAvailable(boolean mIsEpubAvailable) {
-        this.mIsEpubAvailable = mIsEpubAvailable;
-    }
-
     public boolean ismIsPdfAvailable() {
         return mIsPdfAvailable;
     }
 
-    public void setmIsPdfAvailable(boolean mIsPdfAvailable) {
-        this.mIsPdfAvailable = mIsPdfAvailable;
-    }
 }

@@ -141,7 +141,6 @@ public class QueryUtils {
             JSONObject imageLinks;
             String thumbnailLink = "";
             String previewLink = "";
-            String language = "";
 
             JSONObject saleInfo;
             JSONObject retailPrice;
@@ -162,128 +161,122 @@ public class QueryUtils {
                 bookArray = baseJsonResponse.getJSONArray("items");
 
                 //GETTING THE TITLE OF THE BOOK
-            for (int i = 0; i < bookArray.length(); i++){
+                for (int i = 0; i < bookArray.length(); i++) {
                     currentBook = bookArray.getJSONObject(i);
                     volumeInfo = currentBook.getJSONObject("volumeInfo");
                     title = volumeInfo.getString("title");
 
-                //GETTING THE AUTHOR OF THE BOOK
-                if (volumeInfo.has("authors")){
-                    authorsArray = volumeInfo.getJSONArray("authors");
-                    authorsList = authorsArray.getString(0);
-                } else {
-                    authorsList = "";
-                }
-                //GETTING THE PUBLISHER
-                if (volumeInfo.has("publisher")){
-                    publisher = volumeInfo.getString("publisher");
-                } else {
-                    publisher = "";
-                }
-                //GETTING THE PUBLISHED DATE
-                if (volumeInfo.has("publishedDate")){
-                    publishedDate = volumeInfo.getString("publishedDate");
-                } else {
-                    publishedDate = "";
-                }
-                //GETTING THE DESCRIPTION
-                if (volumeInfo.has("description")){
-                    description = volumeInfo.getString("description");
-                } else {
-                    description = "";
-                }
-                //GETTING THE PAGE COUNT
-                if (volumeInfo.has("pageCount")){
-                    pageCount = volumeInfo.getInt("pageCount");
-                } else {
-                    pageCount = 0;
-                }
-                //GETTING THE PRINT TYPE
-                if (volumeInfo.has("printType")){
-                    printType = volumeInfo.getString("printType");
-                } else{
-                    printType = "";
-                }
-                //GETTING THE VALUE FOR CATEGORIES
-                if (volumeInfo.has("categories")){
-                    categoriesArray = volumeInfo.getJSONArray("categories");
-                    category = categoriesArray.getString(0);
-                } else {
-                    category = "";
-                }
-                //GETTING THE RATING
-                if (volumeInfo.has("averageRating")){
-                    averageRating = volumeInfo.getDouble("averageRating");
-                } else {
-                    averageRating = 0.0;
-                }
-                //GETTING THE THUMBNAIL LINK
-                if (volumeInfo.has("imageLinks")){
-                    imageLinks = volumeInfo.getJSONObject("imageLinks");
-                    if (imageLinks.has("thumbnail")){
-                        thumbnailLink = imageLinks.getString("thumbnail");
-                    } else{
-                        thumbnailLink = "";
-                    }
-                }
-                //GETTING THE LANGUAGE
-                if (volumeInfo.has("language")){
-                    language = volumeInfo.getString("language");
-                } else {
-                    language = "";
-                }
-                //GETTING THE PREVIEW LINK
-                if (volumeInfo.has("previewLink")){
-                    previewLink = volumeInfo.getString("previewLink");
-                } else{
-                    previewLink = "";
-                }
-                //GETTING THE PRICE, THE CURRENCY CODE AND THE BUYING LINK
-                if (currentBook.has("saleInfo")){
-                    saleInfo = currentBook.getJSONObject("saleInfo");
-                    if (saleInfo.has("retailPrice")){
-                        retailPrice = saleInfo.getJSONObject("retailPrice");
-                        if (retailPrice.has("amount")){
-                            price = retailPrice.getDouble("amount");
-                        } else {
-                            price = 0.0;
-                        }
-                        if (retailPrice.has("currencyCode")){
-                            currencyCode = retailPrice.getString("currencyCode");
-                        } else {
-                            currencyCode = "";
-                        }
-                    }
-                    if (saleInfo.has("buyLink")){
-                        buyLink = saleInfo.getString("buyLink");
+                    //GETTING THE AUTHOR OF THE BOOK
+                    if (volumeInfo.has("authors")){
+                        authorsArray = volumeInfo.getJSONArray("authors");
+                        authorsList = authorsArray.getString(0);
                     } else {
-                        buyLink = "";
+                        authorsList = "";
                     }
-                }
-                //GETTING THE EPUB AND PDF AVAILABILITY
-                if (currentBook.has("accessInfo")){
-                    accessInfo = currentBook.getJSONObject("accessInfo");
-                    if (accessInfo.has("epub")){
-                        epub = accessInfo.getJSONObject("epub");
-                        if (epub.has("isAvailable")){
-                            isEpubAvailable = epub.getBoolean("isAvailable");
+                    //GETTING THE PUBLISHER
+                    if (volumeInfo.has("publisher")){
+                        publisher = volumeInfo.getString("publisher");
+                    } else {
+                        publisher = "";
+                    }
+                    //GETTING THE PUBLISHED DATE
+                    if (volumeInfo.has("publishedDate")){
+                        publishedDate = volumeInfo.getString("publishedDate");
+                    } else {
+                        publishedDate = "";
+                    }
+                    //GETTING THE DESCRIPTION
+                    if (volumeInfo.has("description")){
+                        description = volumeInfo.getString("description");
+                    } else {
+                        description = "";
+                    }
+                    //GETTING THE PAGE COUNT
+                    if (volumeInfo.has("pageCount")){
+                        pageCount = volumeInfo.getInt("pageCount");
+                    } else {
+                        pageCount = 0;
+                    }
+                    //GETTING THE PRINT TYPE
+                    if (volumeInfo.has("printType")){
+                        printType = volumeInfo.getString("printType");
+                    } else{
+                        printType = "";
+                    }
+                    //GETTING THE VALUE FOR CATEGORIES
+                    if (volumeInfo.has("categories")){
+                        categoriesArray = volumeInfo.getJSONArray("categories");
+                        category = categoriesArray.getString(0);
+                    } else {
+                        category = "";
+                    }
+                    //GETTING THE RATING
+                    if (volumeInfo.has("averageRating")){
+                        averageRating = volumeInfo.getDouble("averageRating");
+                    } else {
+                        averageRating = 0.0;
+                    }
+                    //GETTING THE THUMBNAIL LINK
+                    if (volumeInfo.has("imageLinks")){
+                        imageLinks = volumeInfo.getJSONObject("imageLinks");
+                        if (imageLinks.has("thumbnail")){
+                            thumbnailLink = imageLinks.getString("thumbnail");
                         } else{
-                            isEpubAvailable = false;
+                            thumbnailLink = "";
                         }
                     }
-                    if (accessInfo.has("pdf")){
-                        pdf = accessInfo.getJSONObject("pdf");
-                        if (pdf.has("isAvailable")){
-                            isPdfAvailable = pdf.getBoolean("isAvailable");
+                    //GETTING THE PREVIEW LINK
+                    if (volumeInfo.has("previewLink")){
+                        previewLink = volumeInfo.getString("previewLink");
+                    } else{
+                        previewLink = "";
+                    }
+                    //GETTING THE PRICE, THE CURRENCY CODE AND THE BUYING LINK
+                    if (currentBook.has("saleInfo")){
+                        saleInfo = currentBook.getJSONObject("saleInfo");
+                        if (saleInfo.has("retailPrice")){
+                            retailPrice = saleInfo.getJSONObject("retailPrice");
+                            if (retailPrice.has("amount")){
+                                price = retailPrice.getDouble("amount");
+                            } else {
+                                price = 0.0;
+                            }
+                            if (retailPrice.has("currencyCode")){
+                                currencyCode = retailPrice.getString("currencyCode");
+                            } else {
+                                currencyCode = "";
+                            }
+                        }
+                        if (saleInfo.has("buyLink")){
+                            buyLink = saleInfo.getString("buyLink");
                         } else {
-                            isPdfAvailable = false;
+                            buyLink = "";
                         }
                     }
-                }
+                    //GETTING THE EPUB AND PDF AVAILABILITY
+                    if (currentBook.has("accessInfo")){
+                        accessInfo = currentBook.getJSONObject("accessInfo");
+                        if (accessInfo.has("epub")){
+                            epub = accessInfo.getJSONObject("epub");
+                            if (epub.has("isAvailable")){
+                                isEpubAvailable = epub.getBoolean("isAvailable");
+                            } else{
+                                isEpubAvailable = false;
+                            }
+                        }
+                        if (accessInfo.has("pdf")){
+                            pdf = accessInfo.getJSONObject("pdf");
+                            if (pdf.has("isAvailable")){
+                                isPdfAvailable = pdf.getBoolean("isAvailable");
+                            } else {
+                                isPdfAvailable = false;
+                            }
+                        }
+                    }
 
-                Book book = new Book(title, authorsList, publisher, publishedDate, description, category, currencyCode, printType, language, thumbnailLink, previewLink, buyLink, pageCount, averageRating, price, isEpubAvailable, isPdfAvailable);
-                //ADD THE NEW OBJECT TO THE LIST OF BOOKS
-                books.add(book);
+                    Book book = new Book(title, authorsList, publisher, publishedDate, description, category, currencyCode, printType, thumbnailLink, previewLink, buyLink, pageCount, averageRating, price, isEpubAvailable, isPdfAvailable);
+                    //ADD THE NEW OBJECT TO THE LIST OF BOOKS
+                    books.add(book);
                 }
             }
         }
