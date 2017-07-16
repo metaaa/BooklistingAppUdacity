@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/book_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    </ListView>
+
+    <!--EMPTY VIEW IN CASE OF NO ITEMS IN THE LIST-->
+    <TextView
+        android:id="@+id/empty_text_view"
+        style="@style/empty_state_view"
+        tools:text="No data!"
+        />
+
+    <!--PROGRESS BAR TO INFORM USER THAT SOMETHING IS HAPPENING IN THE BACKGROUND AT STARTUP-->
+    <ProgressBar
+        android:id="@+id/progress_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_centerInParent="true"
+        />
+</RelativeLayout>

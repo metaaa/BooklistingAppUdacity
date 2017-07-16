@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">Book Listing App 4 Udacity</string>
+
+    <string name="book_thumbnail_content_desc">Book thumbnail</string>
+    <string name="info_unavailable">Unavailable</string>
+    <string name="newline">\\n</string>
+
+    <!--ACTIVITY LABELS-->
+    <string name="book_list_activity_label">Book List</string>
+    <string name="book_details_label">Book Details</string>
+    <string name="settings_activity_label">Book Lister Settings</string>
+
+    <!--STRINGS FOR THE CURRENCY CODES-->
+    <string name="cc_eur">€%.2f</string>
+    <string name="cc_usd">$%.2f</string>
+    <string name="cc_gbp">£%.2f</string>
+    <!--STRINGS FOR THE RATING SYSTEM-->
+    <string name="rating_none">rating_none</string>
+    <string name="rating_half">rating_half</string>
+    <string name="rating_one">rating_one</string>
+    <string name="rating_one_half">rating_one_half</string>
+    <string name="rating_two">rating_two</string>
+    <string name="rating_two_half">rating_two_half</string>
+    <string name="rating_three">rating_three</string>
+    <string name="rating_three_half">rating_three_half</string>
+    <string name="rating_four">rating_four</string>
+    <string name="rating_four_half">rating_four_half</string>
+    <string name="rating_five">rating_five</string>
+
+    <!--PLACEHOLDER TEXTS-->
+    <string name="placeholder_book_title">This is the title of the book!</string>
+    <string name="placeholder_book_author">This is the author of the book!</string>
+    <string name="placeholder_book_price">$22</string>
+    <string name="placeholder_book_release_date">11-10-2017</string>
+    <string name="placeholder_book_category">Computer</string>
+    <string name="placeholder_book_print_type">Print type: BOOK</string>
+
+    <!--SETTING'S STRINGS-->
+    <string name="settings_title">Filter settings</string>
+    <string name="settings_menu_item">Settings</string>
+
+    <!--ORDER BY-->
+    <string name="settings_order_by_label">Order By</string>
+    <string name="settings_order_by_key" translatable="false">order_by</string>
+    <string name="settings_order_by_default" translatable="false">@string/settings_order_by_relevance_value</string>
+
+    <!--ORDER BY - RELEVANCE-->
+    <string name="settings_order_by_relevance_label">Most Relevant</string>
+    <string name="settings_order_by_relevance_value" translatable="false">relevance</string>
+
+    <!--ORDER BY - NEWEST-->
+    <string name="settings_order_by_newest_label">Newest First</string>
+    <string name="settings_order_by_newest_value" translatable="false">newest</string>
+
+    <!--MAX RESULTS-->
+    <string name="settings_maxresults_label">Max Results</string>
+    <string name="settings_maxresults_key" translatable="false">max_results</string>
+    <string name="settings_maxresults_default" translatable="false">@string/settings_maxresults_10_value</string>
+    <string name="settings_maxresults_10_label">10</string>
+    <string name="settings_maxresults_10_value" translatable="false">10</string>
+    <string name="settings_maxresults_15_label">15</string>
+    <string name="settings_maxresults_15_value" translatable="false">15</string>
+    <string name="settings_maxresults_20_label">20</string>
+    <string name="settings_maxresults_20_value" translatable="false">20</string>
+    <!--ERRORMESSAGES-->
+    <string name="error_http_request">Problem: HTTP request!</string>
+    <string name="error_create_url">Error: creating URL!</string>
+    <string name="error_response_code">Error response code</string>
+    <string name="error_json_connection">Error: problem retrieving JSON results</string>
+    <string name="error_no_internet">Error: No internet connection.</string>
+    <string name="error_no_matches">The query returned with no matches...</string>
+    <string name="error_date_parsing">Error with input Date!</string>
+    <string name="book_author_error_message">Error: invalid characters!</string>
+    <string name="missing_book_title_error">Error: missing book title!</string>
+    <!--DETAILED VIEWS INFO LABELS-->
+    <string name="label_rating">Rating:\u0020</string>
+    <string name="label_published">Published:\u0020</string>
+    <string name="label_category">Category:\u0020</string>
+    <string name="label_print_type">Print type:\u0020</string>
+    <string name="label_publisher">Publisher:\u0020</string>
+    <string name="label_pp">Pp:\u0020</string>
+    <string name="detailed_book_epub_text">ePub:\u0020</string>
+    <string name="detailed_book_pdf_text">PDF:\u0020</string>
+    <string name="detailed_price_label">Price:\u0020</string>
+    <!--BOOK ACTIVITY'S STYLE-->
+    <string name="book_activity_title">The ultimate BookListing app</string>
+    <string name="book_activity_instructions">Enter the title and/or the name of the author (fully or partially) to search in the database!</string>
+    <string name="book_activity_edit_title_hint">Enter Book title (required)!</string>
+    <string name="book_activity_edit_author_hint">Enter book author (optional)!</string>
+    <string name="book_activity_search_button_text">Search!</string>
+
+
+</resources>

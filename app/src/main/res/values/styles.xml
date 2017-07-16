@@ -1,0 +1,125 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--BASE APPLICATION WITH NO ACTION BAR-->
+    <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--STYLE FOR THE SPLASHSCREEN THEME-->
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+    </style>
+
+    <!--STYLE FOR THE PREFERENCES THEME-->
+    <style name="PreferencesTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:listViewStyle">@style/listViewPrefs</item>
+    </style>
+
+    <style name="listViewPrefs" parent="@android:style/Widget.ListView">
+    </style>
+
+    <!--STYLE FOR THE BOOK ACTIVITY-->
+    <!--STYLE FOR THE HEADER TEXT-->
+    <style name="book_activity_header">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">12dp</item>
+    </style>
+    <!--STYLE FOT THE BOOK ACTIVITY'S INSTRUCTION TEXT-->
+    <style name="book_activity_instruction_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <!--STYLE FOR BOOK ACTIVITY'S EDIT TEXT FIELDS-->
+    <style name="book_activity_edit_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/editTextBackground</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:inputType">textCapWords</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">8dp</item>
+    </style>
+    <!--STYLE FOR THE BOOK ACTIVITY'S SEARCH BUTTON-->
+    <style name="book_activity_search_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <!--STYLE FOR THE EMPTY STATE VIEW-->
+    <style name="empty_state_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--STYLE FOR THE BOOK LIST ITEMS THUMBNAIL-->
+    <style name="book_list_thumbnail">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:contentDescription">@string/book_thumbnail_content_desc</item>
+    </style>
+    <!--STYLE FOR THE BOOK LIST ITEMS TITLE-->
+    <style name="book_list_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <!--STYLE FOR THE BOOK LIST ITEMS AUTHOR-->
+    <style name="book_list_author">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">top</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <!--STYLES FOR THE DETAILED VIEW-->
+    <!--STYLE FOR THE DETAILED THUMBNAIL IMAGE-->
+    <style name="detailed_thumbnail">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:contentDescription">@string/book_thumbnail_content_desc</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+    <!--STYLE FOR THE DETAILED TITLE-->
+    <style name="detailed_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <!--STYLE FOR THE DETAILED AUTHOR-->
+    <style name="detailed_author">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+    <!--STYLE FOR THE DETAILED BUTTONS-->
+    <style name="detailed_buttons">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+</resources>
